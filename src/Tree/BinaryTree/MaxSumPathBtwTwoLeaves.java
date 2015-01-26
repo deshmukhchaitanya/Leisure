@@ -40,10 +40,11 @@ public class MaxSumPathBtwTwoLeaves
 		findMaxSumPathBtwTwoLeaves(n1);
 		System.out.println("Max sum path has sum= "+maxSum);
 	}
-	// for each node check if the sum of data at node + sum of path from left child +
-	// sum of path from right child is > current max sum
-	// if it is them update the max, otherwise choose the path with larger sum, add
-	//  data to it and return. 
+	// idea is to check for each node if the sum of data at node + max sum 
+	// of path from left child + max sum of path from right child is > current max sum
+	// if it is them update the max 
+	// return the sum of the path with larger sum(out of left or right child) and data part
+
 	private static int findMaxSumPathBtwTwoLeaves(TreeNode node) {
 		if(node==null)
 			return -1;
