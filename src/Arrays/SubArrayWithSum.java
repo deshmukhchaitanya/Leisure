@@ -2,7 +2,7 @@ package Arrays;
 
 // finds if an array contains a sub array with a given sum.
 // Idea is to think of a window with first element of array as start and end.
-// Then extending it to the right by adding next elements in array. Sum of
+// Then extending the end to the right by adding next elements in array. Sum of
 // the window constitutes the current sum. Check if current sum is greater 
 // then given sum, if so then remove the elements from the start of the
 // window until current sum is not > given sum and until you reach the 

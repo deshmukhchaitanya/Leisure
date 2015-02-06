@@ -26,8 +26,11 @@ public class DiameterOfTree {
 		n4.setRight(n6);
 		TreeTraversals.inorder(n1);
 		findDiameter(n1);
-		
 		System.out.println("Diameter of the tree is: "+maxDiameter);
+		int res[]=getDiameter(n1);
+		System.out.println(res[0]);
+		System.out.println(res[1]);
+		
 	}
 
 	private static int findDiameter(TreeNode root) 
@@ -41,6 +44,30 @@ public class DiameterOfTree {
 		if(dia>maxDiameter)
 			maxDiameter=dia;
 		return Math.max(left, right)+1;
+	}
+	// below method does same thing but without using a global variable to keep track 
+	// of max diameter. Instead, have an array of length 2 which stores diameter as 
+	// height as 2nd and return this array at each recursion. To decide whether 
+	// the diameter at this node is largest we just need to check if sum of max
+	// height of left subtree of that node + the max height of right subtree 
+	// is > current max diameter which is max of diameter from left and right.
+	// This is available in result[0] from returned from the below children. 
+	// we initialize result[0] of this node with max diameter up till this level
+	// result[1] with max height.
+	public static int[] getDiameter(TreeNode root) 
+	{
+	    int[] result = new int[]{0,0};        
+	    if (root == null)  return result;
+	    int[] leftResult = getDiameter(root.getLeft());
+	    int[] rightResult = getDiameter(root.getRight());
+	    int height = Math.max(leftResult[1], rightResult[1]) + 1;
+	    int rootDiameter = leftResult[1] + rightResult[1];
+	    int leftDiameter = leftResult[0];
+	    int rightDiameter = rightResult[0];
+	    result[0] = Math.max(rootDiameter, Math.max(leftDiameter, rightDiameter));
+	    result[1] = height;
+
+	    return result;
 	}
 
 }
