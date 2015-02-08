@@ -12,12 +12,12 @@ public class BinaryTreeToLinkedList {
 	
 	public static void main(String[] args) 
 	{
-		TreeNode n1=new TreeNode(10);
-		TreeNode n2=new TreeNode(12);
-		TreeNode n3=new TreeNode(25);
-		TreeNode n4=new TreeNode(30);
-		TreeNode n5=new TreeNode(15);
-		TreeNode n6=new TreeNode(36);
+		TreeNode n1=new TreeNode(1);
+		TreeNode n2=new TreeNode(2);
+		TreeNode n3=new TreeNode(5);
+		TreeNode n4=new TreeNode(0);
+		TreeNode n5=new TreeNode(7);
+		TreeNode n6=new TreeNode(6);
 		
 		n1.setLeft(n2);
 		n2.setLeft(n3);
@@ -27,7 +27,8 @@ public class BinaryTreeToLinkedList {
 		TreeTraversals.inorder(n1);
 		System.out.println();
 		TreeNode head=BinaryTreeToLL(n1);
-		printList(head);
+		if(head!=null)
+			printList(head);
 
 	}
 
@@ -42,9 +43,12 @@ public class BinaryTreeToLinkedList {
 	}
 	private static TreeNode BinaryTreeToLL(TreeNode node)
 	{
-		TreeNode[] previous=new TreeNode[1];
 		TreeNode[] head=new TreeNode[1];
-		BinaryTreeToLL(node,previous,head);
+		if(node!=null)
+		{
+			TreeNode[] previous=new TreeNode[1];
+			BinaryTreeToLL(node,previous,head);
+		}
 		return head[0];
 	}
 	
