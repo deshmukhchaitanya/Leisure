@@ -11,7 +11,7 @@ public class DialPad
 
 	public static void main(String[] args) 
 	{
-		String dialedNumber="74745268";
+		String dialedNumber="76426";
 		dialedNumber=dialedNumber.trim();
 		makeDialPad(dialedNumber);
 		ArrayList<String> words= getAllWords(dialedNumber,dialedNumber.length());
@@ -41,8 +41,10 @@ public class DialPad
 			return listOfWords;
 		}	
 		int numberInt=dialedNumber.charAt(dialedNumber.length()-offset)-'0';
-		ArrayList<String> listOfWordsforNum=getWordsforThisNum(numberInt);
+		
 		ArrayList<String> nextlistOfWords=getAllWords(dialedNumber, offset-1);
+		
+		ArrayList<String> listOfWordsforNum=getWordsforThisNum(numberInt);
 		for(String word:listOfWordsforNum)
 		{			
 			for(String wordsInNextList:nextlistOfWords)
