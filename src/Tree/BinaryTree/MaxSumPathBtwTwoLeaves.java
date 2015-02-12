@@ -9,8 +9,6 @@ public class MaxSumPathBtwTwoLeaves
 	private static int maxSum=Integer.MIN_VALUE;
 	public static void main(String[] args) 
 	{
-		
-		
 		TreeNode n1=new TreeNode(-15);
 		TreeNode n2=new TreeNode(5);
 		TreeNode n3=new TreeNode(-8);
@@ -45,7 +43,7 @@ public class MaxSumPathBtwTwoLeaves
 	// if it is them update the max 
 	// return the sum of the path with larger sum(out of left or right child) and data part
 
-	private static int findMaxSumPathBtwTwoLeaves(TreeNode node) {
+	public static int findMaxSumPathBtwTwoLeaves(TreeNode node) {
 		if(node==null)
 			return -1;
 		int left=0,right=0;

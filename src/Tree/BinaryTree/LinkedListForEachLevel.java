@@ -34,8 +34,7 @@ public class LinkedListForEachLevel {
 		}
 
 	}
-
-	private static void getLevelWiseLinkedList(TreeNode root, HashMap<Integer, LinkedList<TreeNode>> hm,int level) 
+	public static void getLevelWiseLinkedList(TreeNode root, HashMap<Integer, LinkedList<TreeNode>> hm,int level) 
 	{
 		if(root!=null)
 		{

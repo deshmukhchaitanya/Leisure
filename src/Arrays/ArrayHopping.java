@@ -62,7 +62,7 @@ public class ArrayHopping
 		System.out.println("Path for hops: "+hop.getPath());
 	}
 	// Memoized approach
-	private static int jumpsMemoized(int[] arr, int i) 
+	public static int jumpsMemoized(int[] arr, int i) 
 	{
 		if(i>=arr.length-1)
 			return minHops[arr.length-1];
@@ -84,7 +84,7 @@ public class ArrayHopping
 		return minHops[i];
 	}
 	// non memoized naive recursive approach with modification to store the hop path
-	private static HopPath jumpsNaive(int[] arr, int i) 
+	public static HopPath jumpsNaive(int[] arr, int i) 
 	{
 		if(i>=arr.length-1)
 		{

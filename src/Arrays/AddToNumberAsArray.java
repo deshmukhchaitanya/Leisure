@@ -8,7 +8,7 @@ public class AddToNumberAsArray {
 		addToArrayAndPrint(arr,7);
 	}
 
-	private static void addToArrayAndPrint(int[] arr, int i) {
+	public static void addToArrayAndPrint(int[] arr, int i) {
 		int nextAdd=i;
 		int [] brr=new int[arr.length+1];
 		int j;

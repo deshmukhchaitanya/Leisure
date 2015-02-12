@@ -16,7 +16,7 @@ public class CountIslandOfOnes
 	}
 	// check for all cells if they have value 1 and are not already part of an 
 	// previously found island, then traverse it in dfs (bfs would also work)   
-	private static int countIslandsofOnes(int[][] mat) 
+	public static int countIslandsofOnes(int[][] mat) 
 	{
 		int count=0;
 		HashSet<Cell> visited=new HashSet<Cell>();
@@ -36,7 +36,7 @@ public class CountIslandOfOnes
 		return count;
 	}
 
-	private static void markAllconnectedOnes(int[][] mat, int i, int j,	HashSet<Cell> visited) 
+	public static void markAllconnectedOnes(int[][] mat, int i, int j,	HashSet<Cell> visited) 
 	{
 		int xMin=(i==0)?0:i-1;
 		int xMax=(i==mat.length-1)?mat.length-1:i+1;

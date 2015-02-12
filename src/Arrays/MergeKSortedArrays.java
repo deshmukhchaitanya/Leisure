@@ -20,7 +20,7 @@ public class MergeKSortedArrays
 			System.out.print(a+" ");
 	}
 
-	private static int[] mergreKSortedArrays(int[][] arr) 
+	public static int[] mergreKSortedArrays(int[][] arr) 
 	{
 		if(arr==null)
 			return null;

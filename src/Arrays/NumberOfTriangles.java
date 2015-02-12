@@ -28,7 +28,7 @@ public class NumberOfTriangles
 		System.out.println("Number of different triangles: "+num);
 	}
 
-	private static int findNumberOfTriangles(int[] arr) 
+	public static int findNumberOfTriangles(int[] arr) 
 	{
 		if(arr==null)
 			return 0;

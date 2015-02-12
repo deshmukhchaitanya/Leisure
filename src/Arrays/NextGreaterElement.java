@@ -24,7 +24,7 @@ public class NextGreaterElement {
 	// when you get a number greater than top of stack then keep popping till
 	// you reach a larger number, at this point push the number at current index
 	// Maintain a hash map for mapping a element to its nge. 
-	private static HashMap<Integer,Integer> findNGE(int[] arr) 
+	public static HashMap<Integer,Integer> findNGE(int[] arr) 
 	{
 		if(arr==null)
 			return null;

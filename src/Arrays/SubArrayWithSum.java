@@ -17,7 +17,7 @@ public class SubArrayWithSum {
 		printSubArraysWithSum(arr,23);
 	}
 
-	private static void printSubArraysWithSum(int[] arr, int sum) 
+	public static void printSubArraysWithSum(int[] arr, int sum) 
 	{
 		int start=0,currSum=0;
 		for (int end = 0; end <arr.length; end++)

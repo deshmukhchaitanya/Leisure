@@ -32,7 +32,7 @@ public class RmvNodesOnPathLessThanK {
 		else
 			TreeTraversals.inorder(tree.getRoot());
 	}
-	private static boolean rmvNodesWithPathLTk(TreeNode root, int k) 
+	public static boolean rmvNodesWithPathLTk(TreeNode root, int k) 
 	{
 		if(root==null)
 			return false;
@@ -40,7 +40,7 @@ public class RmvNodesOnPathLessThanK {
 	}
 	// returns false if path is shorter than given path length otherwise return true
 	// if any of the node on path is short, make its corresponding child null 
-	private static boolean rmvNodesWithPathLTkRecursive(TreeNode node, int k, int level) 
+	public static boolean rmvNodesWithPathLTkRecursive(TreeNode node, int k, int level) 
 	{
 		if(node==null && level<=k-1)
 			return false;

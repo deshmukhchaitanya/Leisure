@@ -63,7 +63,7 @@ public class BinaryTreeToLinkedList {
 	 * the head of the linked list. Note: for a node the previously visited node is basically
 	 * its predecessor.
 	 */
-	private static void BinaryTreeToLL(TreeNode root,TreeNode[] prev,TreeNode[] head) 
+	public static void BinaryTreeToLL(TreeNode root,TreeNode[] prev,TreeNode[] head) 
 	{
 		 // Base case
 	    if (root == null) 

@@ -30,7 +30,7 @@ public class LongestPalindromicSubsequence {
 		System.out.println("Longest Palindrome: "+LCS);
 	}
 	// returns the LCS for two given strings using the lcs table
-	private static String getLCS(String str1,String str2,int[][] lcs) {
+	public static String getLCS(String str1,String str2,int[][] lcs) {
 		String LCS=new String();
 		int i=lcs.length-1,j=lcs[0].length-1;
 		while(i>0 && j>0)
@@ -48,7 +48,7 @@ public class LongestPalindromicSubsequence {
 		return LCS;
 	}
 	// builds and return the lcs table for two given strings
-	private static int[][] buildLCS(String str1, String str2) {
+	public static int[][] buildLCS(String str1, String str2) {
 		
 		int[][] lcs=new int[str1.length()+1][str2.length()+1];
 		for (int i = 0; i < lcs.length; i++) {

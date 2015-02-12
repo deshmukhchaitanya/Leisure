@@ -33,7 +33,7 @@ public class BinaryTreeLeftSum {
 		System.out.println("Left Sum= "+ sum);
 	}
 
-	private static int findLeftSum(TreeNode node,boolean isLeft) 
+	public static int findLeftSum(TreeNode node,boolean isLeft) 
 	{
 		if(node==null)
 			return 0;

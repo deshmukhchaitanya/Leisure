@@ -20,7 +20,7 @@ public class KSortedArray
 	    for(int i:arr)
 	    	System.out.print(i+" ");
 	}
-	private static void sortKSortedArray(int[] arr,int k) 
+	public static void sortKSortedArray(int[] arr,int k) 
 	{
 		PriorityQueue<Integer> minheap=new PriorityQueue<Integer>(k+1);
 		int n=arr.length-1;

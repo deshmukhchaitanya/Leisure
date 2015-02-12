@@ -33,7 +33,7 @@ public class DiameterOfTree {
 		
 	}
 
-	private static int findDiameter(TreeNode root) 
+	public static int findDiameter(TreeNode root) 
 	{
 		if(root==null)
 			return 0;

@@ -2,7 +2,8 @@ package Strings;
 import java.util.ArrayList;
 import java.util.List;
 
-// Print all the occurrences of a given pattern in a given text!! KMP algo implementation   
+// Print all the occurrences of a given pattern in a given text!! Kuth Morris Pratt algo implementation
+// O(n) pattern searching.
 
 public class MyKMP {
 
@@ -26,11 +27,12 @@ public class MyKMP {
 		else
 			System.out.println("Please enter a valid pattern to search!");
 	}
-	// KPM search routine its similar to brute force except it avoids 
-	// starting the search again from the start of pattern instead
-	// it uses the lps array to find the index from where to start the 
-	// search. 
-	private static List<Integer> KMPSearch(String text, String pattern,	int[] lps) 
+	/* KPM search routine its similar to brute force except it avoids
+	 * starting the search again from the start of pattern instead
+	 * it uses the lps array to find the index from where to start the
+	 * search.
+	 */ 
+	public static List<Integer> KMPSearch(String text, String pattern,	int[] lps) 
 	{
 		List<Integer> list=new ArrayList<Integer>();
 		if(text!=null)
@@ -71,10 +73,12 @@ public class MyKMP {
 		}
 		return list;
 	}
-	// this method constructs longest prefix which is also a suffix array such that given 
-	// a sub-pattern pat[0..i], lps[i] is the length of longest prefix of pat[0..i] which is also
-	// a suffix of pat[0..i] 
-	private static int[] constructLPS(String pattern) {
+	/*this method constructs longest prefix which is also a suffix array such that given
+	 * a sub-pattern pat[0..i], lps[i] is the length of longest prefix of pat[0..i] which 
+	 * is also a suffix of pat[0..i]
+	 */ 
+	public static int[] constructLPS(String pattern) {
+		
 		if(pattern==null)
 			return null;
 		if(pattern.length()==0)

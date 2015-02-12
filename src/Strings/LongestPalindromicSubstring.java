@@ -18,7 +18,7 @@ public class LongestPalindromicSubstring {
 		System.out.println(palindrome);
 	}
 
-	private static String getLongestPalindromicSubstring(String str) {
+	public static String getLongestPalindromicSubstring(String str) {
 
 		int maxLength = 1, start = 0,len = str.length(), low, high;
 		// try each index as center

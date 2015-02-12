@@ -10,7 +10,7 @@ public class ZeroToBeReplacedByOne
 		int indx=findIndexOfZeroToBeReplaced(arr);
 		System.out.println(indx);
 	}
-	private static int findIndexOfZeroToBeReplaced(int[] arr) 
+	public static int findIndexOfZeroToBeReplaced(int[] arr) 
 	{
 		boolean zero=false; // keeps track if we are counting for a previous zero 
 		int count=0; 		// counts number of ones 

@@ -16,7 +16,7 @@ public class MinimumUnsortedSubArray {
 			System.out.println("Minimum length sub array sorting which would sort whole array is: from "+len[0]+" to "+len[1]);
 	}
 
-	private static int[] findMinimumUnsortedSubArray(int[] arr) 
+	public static int[] findMinimumUnsortedSubArray(int[] arr) 
 	{
 		if(arr==null)
 			return null;

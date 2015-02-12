@@ -15,7 +15,7 @@ public class SumPairInArray {
 
 	}
 	// O(n) time and O(n) space
-	private static void findSumPairInArray(int[] arr,int sum) {
+	public static void findSumPairInArray(int[] arr,int sum) {
 		if(arr==null)
 			return;
 		HashSet<Integer> set=new HashSet<Integer>();

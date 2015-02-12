@@ -9,13 +9,13 @@ public class RecursiveStringReversal {
 			System.out.println(strReversed.toString());
 	}
 
-	private static StringBuilder reverse(String str) {
+	public static StringBuilder reverse(String str) {
 		if(str==null)
 			return null;
 		return reverse(str,0);
 	}
 
-	private static StringBuilder reverse(String str,int i) 
+	public static StringBuilder reverse(String str,int i) 
 	{
 		StringBuilder thisString=null;
 		if(i>=str.length()-1)

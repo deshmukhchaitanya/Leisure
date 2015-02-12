@@ -35,7 +35,7 @@ public class MSFillColor
 			System.out.println();
 		}
 	}
-	private static void fillColor(int[][] mat, int x, int y, int color) 
+	public static void fillColor(int[][] mat, int x, int y, int color) 
 	{
 		// get a box around the given x,y and do fillColor for each coordinate in box..repeat
 		int oldColor=mat[x][y];
@@ -47,7 +47,7 @@ public class MSFillColor
 		fillColorInSurrounding(xMin,xMax,yMin,yMax,mat,color,oldColor);
 
 	}
-	private static void fillColorInSurrounding(int xMin, int xMax, int yMin, int yMax, int[][] mat,int color,int oldColor) 
+	public static void fillColorInSurrounding(int xMin, int xMax, int yMin, int yMax, int[][] mat,int color,int oldColor) 
 	{
 		for(int k=xMin;k<=xMax;k++)
 		{

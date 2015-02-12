@@ -25,7 +25,7 @@ public class CountInversions
 		System.out.println("Nomber of inversions: "+ inversions);
 	}
 
-	private static int mergeSort(int[] arr, int start, int end) {
+	public static int mergeSort(int[] arr, int start, int end) {
 		if(start>=end)
 			return 0;
 		int mid=start+((end-start)/2);

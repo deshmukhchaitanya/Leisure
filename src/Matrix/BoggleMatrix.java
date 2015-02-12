@@ -19,7 +19,7 @@ public class BoggleMatrix {
 		}
 	}
 
-	private static HashSet<String> boggle(char[][] mat) 
+	public static HashSet<String> boggle(char[][] mat) 
 	{
 		HashSet<String> totalWords=new HashSet<String>();
 		for (int i = 0; i < mat.length; i++) 
@@ -34,7 +34,7 @@ public class BoggleMatrix {
 		return totalWords;
 	}
 
-	private static HashSet<String> boggleRecursive(char[][] mat, int i, int j, HashSet<Character> visited) 
+	public static HashSet<String> boggleRecursive(char[][] mat, int i, int j, HashSet<Character> visited) 
 	{
 		HashSet<String> totalwords=new HashSet<String>();
 		visited.add(mat[i][j]);
