@@ -9,7 +9,7 @@ import java.util.ArrayList;
 // All observers must implement this interface
 interface Observer  
 {
-	public void update(float interest);
+	public void update(float fee);
 }
 /* all subjects must implements this interface 
    registerObserver method is used to subscribe an observer to this subject
