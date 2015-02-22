@@ -1,6 +1,7 @@
 package Tree.BST;
 
-/*given a number and a tree as input find the nearest node in a given tree */
+/*given a number and a binary search tree as input find the nearest node in a given tree */
+
 public class FindNearestNode 
 {
 	public static void main(String[] args) 
@@ -14,7 +15,7 @@ public class FindNearestNode
 		tree.insert(tree.getRoot(),25);
 		tree.insert(tree.getRoot(),28);
 		
-		TreeNode node=nearestNode(tree.getRoot(), 12, Integer.MAX_VALUE, null);
+		TreeNode node=nearestNode(tree.getRoot(), 15, Integer.MAX_VALUE, null);
 		if(node!=null)
 			System.out.println("Nearest node is: "+node.getData());
 		else
@@ -26,12 +27,14 @@ public class FindNearestNode
 	{
 		if(node==null)
 			return minNode;
-		if(node.getData()==num)
+		else if(node.getData()==num)
 			return node;
+		
 		int diff=Math.abs(node.getData()-num);
+		
 		if(diff<minDiff && node.getData()>num)
 			return nearestNode(node.getLeft(), num, diff, node);
-		if(diff<minDiff && node.getData()<num)
+		else if(diff<minDiff && node.getData()<num)
 			return nearestNode(node.getLeft(), num, diff, node);
 		return minNode;
 	}
