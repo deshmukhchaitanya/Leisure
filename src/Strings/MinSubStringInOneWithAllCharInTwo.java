@@ -15,10 +15,10 @@ public class MinSubStringInOneWithAllCharInTwo
 {
 	public static void main(String[] args) 
 	{
-		findMinSubStringInOWithAllCharInTwo("this is a test string", "tist");
+		findMinSubStringInOneWithAllCharInTwo("this is a test string", "tist");
 	}
 	// desc: maintain a window that has all chars from two and try to minimize its length by removing char from the start
-	public static void findMinSubStringInOWithAllCharInTwo(String one,String two)
+	public static void findMinSubStringInOneWithAllCharInTwo(String one,String two)
 	{
 		if(one==null || two==null)
 			System.out.println("No such sub string found");

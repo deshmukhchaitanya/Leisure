@@ -3,9 +3,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-//Print the next greater element(NGE) for each element in an array. If the NGE for 
-//an element is not present then assign -1 as NGE. this is a O(n) method with 
-//elegant use of of a stack otherwise brute force O(n^2) method is there.
+//Print the next greater element(NGE) to the right for each element in an array. 
+// If the NGE for an element is not present then assign -1 as NGE. this is a O(n) 
+// method with elegant use of of a stack otherwise brute force O(n^2) method is there.
 
 public class NextGreaterElement {
 

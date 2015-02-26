@@ -1,5 +1,8 @@
 package Arrays;
 
+// A number is given in the form of an array, add a given number to the number
+// given as array.
+
 public class AddToNumberAsArray {
 
 	public static void main(String[] args) 
